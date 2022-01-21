@@ -2,7 +2,7 @@
 import { ref, reactive } from "vue";
 import { todoType } from "./type";
 defineProps<{
-  msg: string;
+  msg?: string;
 }>();
 const count = ref(0);
 function onClick(): void {
