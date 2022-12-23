@@ -1,3 +1,13 @@
+/*
+ * @Author: fang_zc fang_zc@hdec.com
+ * @Date: 2022-12-16 16:35:26
+ * @LastEditors: fang_zc fang_zc@hdec.com
+ * @LastEditTime: 2022-12-23 17:02:58
+ * @FilePath: \h5-mobile\tsconfig.json
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by fang_zc fang_zc@hdec.com, All Rights Reserved. 
+ */
 {
   "compilerOptions": {
     "target": "ESNext",
