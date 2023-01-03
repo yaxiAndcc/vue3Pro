@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 15:03:50
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-21 09:49:17
+ * @LastEditTime: 2023-01-03 16:35:01
  * @FilePath: \h5-mobile\src\views\redirect\index.vue
  * @Description: 
  * 

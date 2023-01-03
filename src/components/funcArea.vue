@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 09:43:26
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-23 14:17:10
+ * @LastEditTime: 2023-01-03 17:06:46
  * @FilePath: \h5-mobile\src\components\funcArea.vue
  * @Description: 
  * 
@@ -23,10 +23,10 @@
 </template>
 
 <script lang="ts" setup>
-import { showToast } from 'vant';
+import { showToast } from "vant";
 import { FuncConfig } from "@/config/funcArea";
-import { defineProps } from "vue";
-import { useRouter } from "vue-router";
+import { RouteLocationRaw, useRouter } from "vue-router";
+const router = useRouter();
 
 interface Props {
   funcArr: FuncConfig;
@@ -34,9 +34,8 @@ interface Props {
 defineProps<Props>();
 
 function funcClick(item: FuncConfig[number]) {
-  const router = useRouter();
   if (item.name) {
-    router.push({ name: item.name });
+    router.push(<RouteLocationRaw>item.path);
   } else {
     showToast("功能开发中...");
   }

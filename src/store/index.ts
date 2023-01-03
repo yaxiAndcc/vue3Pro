@@ -2,8 +2,8 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 14:24:03
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-16 14:51:12
- * @FilePath: \h5-mobile\src\store\index.js
+ * @LastEditTime: 2023-01-03 16:46:45
+ * @FilePath: \h5-mobile\src\store\index.ts
  * @Description: 
  * 
  * Copyright (c) 2022 by fang_zc fang_zc@hdec.com, All Rights Reserved. 
@@ -11,14 +11,14 @@
 // 配置pinia状态
 import { defineStore } from 'pinia'
 
-const { projectName, projectVersion, projectDescription } = require('../config')
+import projectInfo from '@/config'
 // 项目基础信息
 export const useProjectBaseStore = defineStore({
     id: 'projectBase',
     state: () => ({
-        projectName: projectName,
-        projectVersion: projectVersion,
-        projectDescription: projectDescription,
+        projectName: projectInfo.projectName,
+        projectVersion: projectInfo.projectVersion,
+        projectDescription: projectInfo.projectDescription,
     })
 })
 
@@ -31,12 +31,12 @@ export const useUserStore = defineStore({
         token: '',
     }),
     getters: {
-        getUserName() {
+        getUserName(): string {
             return this.userName
         },
     },
     actions: {
-        setUserName(userName) {
+        setUserName(userName: string) {
             this.userName = userName
         },
     },

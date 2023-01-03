@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 16:35:26
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-23 17:03:03
+ * @LastEditTime: 2023-01-03 16:33:39
  * @FilePath: \h5-mobile\src\main.ts
  * @Description: 
  * 
@@ -25,13 +25,15 @@ import router from './router'
 import { createPinia } from 'pinia'
 import Vant from 'vant';
 import 'vant/lib/index.css';
-import  components from '@/components/index'
+import  installComponents from './components/index'
 
 const app=createApp(App)
 
-app.mount('#app')
 app.use(router)
 app.use(Vant);
 const pinia = createPinia()
 app.use(pinia)
-app.use(components)
+app.use(installComponents)
+// app.use(router) 需放在app.mount('#app')前面 不然加载时router-view、router-link等未被渲染
+app.mount('#app')
+
