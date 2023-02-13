@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 09:47:59
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-21 10:03:22
+ * @LastEditTime: 2023-01-09 14:11:40
  * @FilePath: \h5-mobile\src\views\home\index.vue
  * @Description: 
  * 
@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import funcArea from "../../components/funcArea.vue";
-import funcConig from "../../config/funcArea.js";
+import funcConig from "@/config/funcArea.js";
 import { useProjectBaseStore } from "../../store";
 import { ref } from "vue";
 export default {

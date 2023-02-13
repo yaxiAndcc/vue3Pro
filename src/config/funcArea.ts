@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 16:36:07
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2023-01-03 16:56:25
+ * @LastEditTime: 2023-01-11 15:51:37
  * @FilePath: \h5-mobile\src\config\funcArea.ts
  * @Description: 
  * 
@@ -27,13 +27,13 @@ const funcConfig: FuncConfig = [
     },
     {
         img: rainFallDot,
-        name: "点雨量",
-        path: RouteName.template,
+        name: "地图",
+        path: RouteName.map,
     },
     {
         img: rainFallDot,
-        name: "河道水情",
-        path: RouteName.template,
+        name: "ts测试",
+        path: RouteName.tsStudy,
     },
     {
         img: rainFallDot,

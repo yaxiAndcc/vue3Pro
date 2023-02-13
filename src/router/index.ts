@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 09:44:08
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2022-12-22 16:46:37
+ * @LastEditTime: 2023-01-12 11:21:16
  * @FilePath: \h5-mobile\src\router\index.ts
  * @Description: 
  * 
@@ -15,13 +15,15 @@ export enum RouteName {
     redirect = 'redirect',
     home = 'home',
     workBench = 'workBench',
-    template = 'template'
+    template = 'template',
+    map = 'map',
+    tsStudy = 'tsStudy'
 }
 
-const routes:RouteRecordRaw[] = [
+const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        name:  RouteName.redirect,
+        name: RouteName.redirect,
         component: () => import('../views/redirect/index.vue')
     },
     {
@@ -37,8 +39,18 @@ const routes:RouteRecordRaw[] = [
     {
         path: '/template',
         name: RouteName.template,
-        component: () => import('../views/template/index.vue')
+        component: () => import('../views/template/template.vue')
     },
+    {
+        path: '/map',
+        name: RouteName.map,
+        component: () => import('../views/map/index.vue')
+    },
+    {
+        path: '/tsStudy',
+        name: RouteName.tsStudy,
+        component: () => import('../views/tsStudy/index.vue')
+    }
 ]
 
 const router = createRouter({

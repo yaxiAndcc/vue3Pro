@@ -2,7 +2,7 @@
  * @Author: fang_zc fang_zc@hdec.com
  * @Date: 2022-12-16 09:43:26
  * @LastEditors: fang_zc fang_zc@hdec.com
- * @LastEditTime: 2023-01-03 17:06:46
+ * @LastEditTime: 2023-01-09 14:12:35
  * @FilePath: \h5-mobile\src\components\funcArea.vue
  * @Description: 
  * 
@@ -34,7 +34,7 @@ interface Props {
 defineProps<Props>();
 
 function funcClick(item: FuncConfig[number]) {
-  if (item.name) {
+  if (item.path) {
     router.push(<RouteLocationRaw>item.path);
   } else {
     showToast("功能开发中...");
